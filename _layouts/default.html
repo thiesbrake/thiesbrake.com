@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Thies Brake</title>
+        <meta name="description" content="I'm a young and experienced designer who fell in love with designing as well as writing. I share my experiences with developing and designing things on the internet.">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+        <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
+        <link rel="shortcut icon" type="image/x-icon" href="{{ site.url }}/assets/favicon.ico">
+        <link rel="stylesheet" href="build/style.css">
+        
+        <!-- init jquery -->        
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+        <!-- Load fonts from typekit -->
+        <script type="text/javascript" src="http://use.typekit.net/rub4njq.js"></script>
+        <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    </head>
+    <body>
+
+
+        <header class="header" role="banner"> <!-- BEGIN HEADER -->
+            
+            <div class="logo"><a href="{{ page.url }}">thiesbrake</a></div>
+
+            <nav class="main-nav" role="navigation">
+                <ul>
+                    <li class="active"><a href="{{ page.url }}">home</a></li>
+                    <li><a href="https://twitter.com/thsbrk" target="_blank">@thsbrk</a></li>
+                </ul>
+            </nav>
+
+            <div class="clearfix"></div>
+
+        </header> <!-- END HEADER -->
+
+
+
+        <div class="main" role="main"> <!-- BEGIN MAIN -->
+
+             <aside class="list-header">
+                <h2>Exploring</h2>
+            </aside>
+            
+            <article role="article" class="post-list experiments">
+            <ul>
+                {% for post in site.categories.experiment %}
+                <li>
+                    <div class="list-wrap">
+                        <h2>{{ post.title }}</h2>
+                        <div class="entry-meta"><p>{{ post.date | date: "%A, %b %d 20%y" }}</p></div>
+                        {{ post.content }} 
+                    </div> 
+                </li>
+                {% endfor %}
+            </ul>
+            </article>
+
+            <aside class="list-header">
+                <h2>Writing</h2>
+            </aside>
+            
+            <article role="article" class="post-list articles">
+            <ul>
+                {% for post in site.categories.article %}
+                <li>
+                    <div class="list-wrap">
+                    <a href="{{ post.url }}"><h2>{{ post.title }}</h2></a>
+                    <div class="entry-meta"><p>{{ post.date | date: "%A, %b %d 20%y" }}</p></div>
+                    </div> 
+                </li>
+                {% endfor %}
+            </ul>
+            </article>
+
+        </div> <!-- END MAIN -->
+
+        {% include footer.html %}

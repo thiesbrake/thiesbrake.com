@@ -1,0 +1,11 @@
+# Ignore Jekyll generated files
+_site
+
+# Ignore caches and logs
+.sass-cache
+
+# Ignore node dependencies. Ensure you run `node install`!
+node_modules/
+
+# Ignore junk files
+.DS_Store

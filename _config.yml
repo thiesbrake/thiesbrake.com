@@ -1,0 +1,11 @@
+name: "thiesbrake.com"
+description: "Blog of Thies Brake"
+
+url: "http://localhost:4000"
+
+paginate: 10
+
+markdown: rdiscount
+permalink: pretty
+
+exclude: ["node_modules", "package.json", "Gruntfile.js"]

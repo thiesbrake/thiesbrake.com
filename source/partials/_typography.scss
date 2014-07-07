@@ -1,0 +1,187 @@
+/*------------------------------------*\
+    $Typography
+\*------------------------------------*/
+
+// 1. Fonts                           ==============================
+
+$Serif:             			   "adobe-garamond-pro", Georgia, "Times New Roman", serif;
+$Sans:             				"gesta", Helvetica, Arial, sans-serif;
+
+// 2. Headlines                       ==============================
+
+h1, h2, h3, h4, h5, h6{
+	color: $textcolor;
+}
+
+h1{
+	font-family: $Serif;
+	font-weight: 600;
+	font-style: italic;
+	font-size: 3.125rem;
+   line-height: 3.438rem;
+	margin-bottom: 0.625rem;
+}
+
+h2{
+   font-family: $Serif;
+   font-weight: 600;
+   font-style: italic;
+   font-size: 2.7rem;
+   line-height: 3.2rem;
+   margin-bottom: 0;
+}
+
+h3{
+   font-family: $Serif; 
+   font-weight: 600;
+   font-size: 2.125rem;
+   line-height: 2.875rem;
+   margin-bottom: 15px;
+}
+
+h4{}
+
+h5{}
+
+h6{}
+
+// 3. Paragraphs                      ==============================
+
+p {
+   font-family: $Serif;
+   font-size: 1.500em;
+   line-height: 2.125rem;
+   font-weight: 400;
+   font-style: normal;
+   color: $textcolor;
+   margin-bottom: 2.188rem;
+   margin-top: 0;
+}
+
+p:last-child{
+
+   &:after{
+      content: "";
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      background: $dividercolor;
+      margin-left: 10px;
+      vertical-align: middle;
+   }
+}
+
+.entry-meta p{
+   font-size: 1.375em;
+   color: $abstractcolor;
+   line-height: 1.563rem;
+   font-family: $Sans;
+   font-weight: 300;
+   font-style: normal;
+   margin-bottom: 2.188rem;
+
+    &:after{
+      display: none;
+   }
+}
+
+.entry-abstract p{
+   font-size: 1.500rem;
+   line-height: 2.125rem;
+   font-family: $Sans;
+   font-weight: 300;
+   font-style: normal;
+   color: $abstractcolor;
+   margin-bottom: 1.563rem;
+
+   &:after{
+      display: none;
+   }
+}
+
+strong {
+   font-family: $Serif;
+   font-weight: 300;
+   font-style: normal;
+}
+
+em {
+   font-family: $Serif;
+   font-weight: 400;
+   font-style: italic;
+}
+
+// 4. Quotes 	                      ==============================
+
+blockquote{
+   margin: 0;
+   margin-bottom: 2.188rem;
+   margin-top: 1.563rem;
+   font-size: 2.000rem;
+   line-height: 2.625rem;
+   text-align: center;
+   color: $textcolor;
+   font-family: $Serif;
+   font-weight: 400;
+   font-style: italic;
+}
+
+// 5. Links 	                      ==============================
+
+a{
+   @include transition(all 0.1s ease-in-out);
+   color: $textcolor;
+	text-decoration: underline;
+   
+
+	&:hover{
+		text-decoration: underline;
+      color: $accentcolor;
+		outline: none;
+		border: none;
+	}
+
+	&:active{
+		text-decoration: none;
+		outline: none;
+		border: none;
+	}
+
+	&:focus{
+		text-decoration: none;
+		outline: none;
+		border: none;
+	}
+
+	&:visited{
+		text-decoration: none;
+		outline: none;
+		border: none;
+	}
+}
+
+// 6. Lists 	                      ==============================
+
+ul, ol{
+	padding-top: 1.2rem;
+	padding-left: 0;
+	margin: 1.5rem 0rem;
+	margin-bottom: 2.3rem;
+
+	li{
+		font-family: $Serif;
+   	font-size: 1.500em;
+      line-height: 2.125rem;
+		font-weight: 400;
+		font-style: normal;
+		color: $textcolor;
+		margin-bottom: 0rem;
+		margin-top: 0;
+	}
+}
+
+// 7. Code                          ==============================
+
+code{
+   font-size: 0.8em;
+}

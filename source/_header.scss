@@ -1,0 +1,81 @@
+/*------------------------------------*\
+    $Header
+\*------------------------------------*/
+
+.header{
+	width: 100%;
+	max-width: 760px;
+	padding: 20px 50px 0 50px;
+	min-height: 62px;
+	margin: 0 auto;
+	margin-bottom: 80px;
+}
+
+// 1. Main-Nav                      ==============================
+
+.main-nav{
+	padding-top: 5px;
+	float: right;
+
+	ul{
+		border: none;
+		padding: 0;
+		margin-top: 15px;
+
+		li{
+			float: left;
+			list-style-type: none;
+			margin: 0;
+
+			a{	
+				font-family: $Serif;
+				font-weight: 500;
+				font-size: 1.3rem;
+				color: $lightgrey;
+				margin-right: 30px;
+				text-decoration: none;
+
+				&:hover{
+					
+					text-decoration: none;
+					color: $accentcolor;
+				}
+			}
+
+			&:last-child a{
+				margin-right: 0px;
+			}
+
+		}
+
+		li.active a{
+			color: $green;
+		}
+	}
+}
+
+// 2. Logotype                      ==============================
+
+.logo{
+
+	
+	float: left;
+	font-family: $Serif;
+    font-weight: 600;
+    font-style: normal;
+	font-size: 2rem;
+	line-height: 2.2rem;
+
+	a{
+		@include transition(all 0.2s ease-in-out);
+		display: inline-block;
+		color: $textcolor;
+		font-size: 1.375em;
+		padding: 20px 0px 10px 0px;
+		text-decoration: none;
+
+		&:hover{
+			text-decoration: none;
+		}
+	}
+}

@@ -1,0 +1,18 @@
+---
+layout: post 
+title: QuickTip - Images With Masonry.js
+category: experiment
+---
+
+<p>From time to time masonry will calculate inaccurately because your masonry-elements contain images. The script starts calculating - whether all images already had been fully loaded or not. As a result the calculation isn't exact. To counter this behaviour there is a script available which monitors when all images are fully loaded. You can grab it <a href="http://desandro.github.io/imagesloaded/" target="_blank">here</a>:</p>
+
+<p>Just wrap your masonry with the <span class="code">imagesLoaded();</span> function</p>
+
+{% highlight ruby %}
+var container = document.querySelector('#container');
+var msnry;
+// initialize Masonry after all images have loaded
+imagesLoaded( container, function() {
+  msnry = new Masonry( container );
+});
+{% endhighlight %}
