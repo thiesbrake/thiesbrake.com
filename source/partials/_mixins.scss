@@ -10,16 +10,6 @@
 	box-sizing:         $type;
 }
 
-// USAGE: @include transition(all 0.2s ease-in-out);
-@mixin transition($transition...) {
-	$prefixes:      ("-webkit", "-ms", "-o",  "", "-moz");
-  @each $prefix in $prefixes {
-    #{$prefix}-transition: $transition;
-  }
-
-  transition: $transition;
-}
-
 // USAGE: @include droid-font(400);
 @mixin droid-font($weight) {
 	font-family: $serif;
