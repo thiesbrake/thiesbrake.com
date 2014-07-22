@@ -7,7 +7,6 @@ var gulp         = require('gulp'),
     livereload   = require('gulp-livereload')
  
 var exec = require('child_process').exec;
-// Das ist ein Test
 var gutil = require('gulp-util');
 
 
